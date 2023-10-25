@@ -594,11 +594,6 @@ public class ClientEvents {
             } else {
                 nearness = BiomeSampler.sampleBiomesFloat(player.level(), player.position(), ACBiomeRegistry::getBiomeFogNearness);
             }
-
-            if (nearness != 1.0F) {
-                event.setCanceled(true);
-                event.setNearPlaneDistance(event.getNearPlaneDistance() * nearness);
-            }
         }
     }
 
